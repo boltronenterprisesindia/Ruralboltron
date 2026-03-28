@@ -1,0 +1,740 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Boltron Enterprises</title>
+
+    <!-- Bootstrap CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <!-- Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+      integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- NAVBAR -->
+    <nav class="navbar navbar-expand-lg navbar-dark">
+      <div class="container">
+        <!-- Brand with Logo -->
+        <a class="navbar-brand d-flex align-items-center" href="#home">
+          <img
+            src="Boltron.jpg"
+            alt="Boltron Enterprises Logo"
+            class="logo-img me-2"
+          />
+          <span class="fw-bold fs-4">Boltron Enterprises </span>
+           
+        </a>
+
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
+            <li class="nav-item">
+              <a class="nav-link" href="#about">About</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#services">Services</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#soldier">Soldier</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#contact">Contact</a>
+            </li>
+          </ul>
+
+          <!-- Search -->
+          <form class="d-flex ms-lg-3 mt-3 mt-lg-0" role="search">
+            <input
+              class="form-control form-control-sm me-2"
+              type="search"
+              placeholder="Search..."
+              aria-label="Search"
+              id="navSearchInput"
+            />
+            <button
+              class="btn btn-outline-light btn-sm"
+              type="button"
+              onclick="handleNavSearch()"
+            >
+              Search
+            </button>
+          </form>
+        </div>
+
+        <!-- More dropdown -->
+        <div class="dropdown ms-2 mt-3 mt-lg-0">
+          <button
+            class="btn btn-outline-light btn-sm"
+            type="button"
+            id="moreMenuButton"
+            data-bs-toggle="dropdown"
+            aria-expanded="false"
+          >
+            &#8942;
+          </button>
+          <ul
+            class="dropdown-menu dropdown-menu-end dropdown-menu-dark"
+            aria-labelledby="moreMenuButton"
+          >
+            <li>
+              <a
+                class="dropdown-item"
+                href="javascript:void(0)"
+                onclick="scrollToDirectors()"
+              >
+                Directors
+              </a>
+            </li>
+                        <li>
+              <a
+                class="dropdown-item"
+                href="javascript:void(0)"
+                onclick="document.getElementById('overview').scrollIntoView({ behavior: 'smooth', block: 'start' });"
+              >
+                Boltron Overview
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- HERO -->
+    <section id="home" class="hero text-center text-white">
+      <div class="container">
+        <h1 class="display-2 fw-bold mb-4">Boltron Enterprises</h1>
+        <p class="lead mb-1">( Turning ruralhands  to global brands )</p>
+        <p class="lead mb-3">
+          Transforming industries through local innovation, digital integration,
+          and rural empowerment.
+        </p>
+        <a href="#services" class="btn btn-primary btn-lg px-5 py-3"
+          >Our Services</a
+        >
+      </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section id="about" class="py-5">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-8 mx-auto text-center">
+            <h2 class="mb-4">About Boltron</h2>
+            <p>
+              Boltron Enterprises is a growing, multi-domain business initiative
+              founded by Gokul K in Tamil Nadu, India. The brand is part of a
+              larger vision under the Boltron name, aiming to transform
+              industries through local innovation, digital integration, and
+              rural empowerment.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SERVICES / DIVISIONS -->
+    <section id="services" class="py-5 soldier-section">
+      <div class="container">
+        <h2 class="text-center mb-3">Boltron Divisions</h2>
+        <p class="text-center text-muted mb-5">
+          Turning rural hands into global brands through multi-industry
+          ventures.
+        </p>
+
+        <div class="row g-4">
+          <!-- Boltron MFG -->
+          <div class="col-md-4">
+            <div class="card h-100 text-center p-4 service-card">
+              <div class="card-body">
+                <h5 class="card-title text-warning">Boltron MFG</h5>
+                <p class="card-text mb-1">Plastic parts, rubber components,</p>
+                <p class="card-text mb-1">sheet metal items &amp; more.</p>
+                <p class="card-text mb-3 text-muted">
+                  E-commerce &amp; B2B supply.
+                </p>
+                <a href="boltron-mfg.html" class="btn btn-primary btn-sm">
+                  View details
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Boltron drafts -->
+          <div class="col-md-4">
+            <div class="card h-100 text-center p-4 service-card">
+              <div class="card-body">
+                <h5 class="card-title text-info">Boltron DRAFTZ</h5>
+                <p class="card-text mb-1">
+                  Focused entirely on tooling design &amp;
+                </p>
+                <p class="card-text mb-1">Sheet Metal Tool Design.</p>
+                <p class="card-text mb-3 text-muted">
+                  Planned – last-mile solutions.
+                </p>
+                <a href="boltron-draftz.html" class="btn btn-primary btn-sm">
+                  View details
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Boltron ecom-->
+          <div class="col-md-4">
+            <div class="card h-100 text-center p-4 service-card">
+              <div class="card-body">
+                <h5 class="card-title text-success">Boltron ECOM</h5>
+                <p class="card-text mb-1">Travel & Utility Products,</p>
+                <p class="card-text mb-1">Personal Use Products.</p>
+                <p class="card-text mb-3 text-muted">
+                  In planning – rural IT jobs.
+                </p>
+                <a href="boltron-ecom.html" class="btn btn-primary btn-sm">
+                  View details
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Boltron EXIM -->
+          <div class="col-md-4">
+            <div class="card h-100 text-center p-4 service-card">
+              <div class="card-body">
+                <h5 class="card-title text-primary">Boltron EXIM</h5>
+                <p class="card-text mb-1">
+                  Export Support Guidance and coordination for exporting Indian
+                  products to international markets.,
+                </p>
+                <p class="card-text mb-3 text-muted">
+                  India &amp; future imports.
+                </p>
+                <a href="boltron-exim.html" class="btn btn-primary btn-sm">
+                  View details
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Boltron INTEGRATED FRAMS -->
+          <div class="col-md-4">
+            <div class="card h-100 text-center p-4 service-card">
+              <div class="card-body">
+                <h5 class="card-title text-danger">Boltron INTEGRATED FRAMS</h5>
+                <p class="card-text mb-1">Better long-term rural business potential:</p>
+                <p class="card-text mb-1">Multiple income opportunities,</p>
+                <p class="card-text mb-3 text-muted">
+                 Natural productivity improvement.
+                </p>
+                <a href="boltron-integrated-farms.html" class="btn btn-primary btn-sm">
+                  View details
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Boltron IT services -->
+          <div class="col-md-4">
+            <div class="card h-100 text-center p-4 service-card">
+              <div class="card-body">
+                <h5 class="card-title text-warning"> Boltron IT services </h5>
+                <p class="card-text mb-1">Manufacturing Companies,</p>
+                <p class="card-text mb-1">Online Product Sellers,</p>
+                <p class="card-text mb-3 text-muted">
+                  Freelancers & Consultants.
+                </p>
+                <a href="boltron-it-services.html" class="btn btn-primary btn-sm">
+                  View details
+                </a>
+              </div>
+            </div>
+          </div>
+                    <!-- Boltron Clothings -->
+          <div class="col-md-4">
+            <div class="card h-100 text-center p-4 service-card">
+              <div class="card-body">
+                <h5 class="card-title text-warning">Boltron Clothings</h5>
+                <p class="card-text mb-1">
+                  Thoughtfully stitched men’s and women’s wear.
+                </p>
+                <p class="card-text mb-3 text-muted">
+                  Crafted in quiet corners. Worn everywhere.
+                </p>
+                <a href="boltron-clothings.html" class="btn btn-primary btn-sm">
+                  Explore Collections
+                </a>
+              </div>
+            </div>
+          </div>
+
+             <!-- BOLTRON BRANDS OVERVIEW -->
+    <section id="overview" class="py-5">
+      <div class="container">
+        <div class="bg-soft p-4 p-md-5">
+          <h2 class="section-title mb-3 text-center">
+            Boltron Brands Overview
+          </h2>
+          <p class="text-center mb-4">
+            Boltron is building a multi-division ecosystem across manufacturing, logistics,
+            sourcing, agri, fashion, power, IT and digital brands like B Cut Studio.
+          </p>
+          <div class="row g-3 text-center">
+            <div class="col-6 col-md-3">
+              <p class="mb-1 fw-semibold">Manufacturing &amp; Trade</p>
+              <p class="small text-muted mb-0">Boltron MFG, Source &amp; Power</p>
+            </div>
+            <div class="col-6 col-md-3">
+              <p class="mb-1 fw-semibold">Services &amp; Support</p>
+              <p class="small text-muted mb-0">Logistics, BPO &amp; IT</p>
+            </div>
+            <div class="col-6 col-md-3">
+              <p class="mb-1 fw-semibold">Agri &amp; Rural</p>
+              <p class="small text-muted mb-0">Boltron Agri &amp; Farms</p>
+            </div>
+            <div class="col-6 col-md-3">
+              <p class="mb-1 fw-semibold">Brands &amp; Media</p>
+              <p class="small text-muted mb-0">Fashion labels &amp; B Cut Studio</p>
+            </div>
+          </div>
+        </div>
+      </div>
+                <div class="mt-4 text-center">
+            <a href="#services" class="btn btn-primary btn-sm me-2">
+              Explore Boltron Divisions
+            </a>
+            <a href="b-cut-studio.html" class="btn btn-outline-light btn-sm">
+              Start With Your Life
+            </a>
+          </div>
+    </section>
+
+   <!-- Full-width visual (separate row la) -->
+<div class="row g-4 mt-3">
+  <div class="col-12">
+    <div
+      style="
+        width: 100%;
+        min-height: 420px;
+        background: url('boltron1.jpg') center center/cover no-repeat;
+        border-radius: 0.75rem;
+      "
+    ></div>
+  </div>
+</div>
+
+    <!-- CONTACT -->
+    <section id="contact" class="py-5">
+      <div class="container">
+        <div class="row align-items-stretch">
+          <!-- Left: Form -->
+          <div class="col-lg-7 mb-4 mb-lg-0 d-flex">
+            <div class="w-100">
+              <h2 class="mb-3">Work with Boltron</h2>
+              <p class="mb-4">
+                Interested in Boltron MFG, DraftZ, Ecom, Agri or partnerships?
+                Share your details and we will connect with you.
+              </p>
+              <form id="contactForm">
+                <div class="row g-3">
+                  <div class="col-md-6">
+                    <input
+                      type="text"
+                      class="form-control"
+                      placeholder="Your Name / Company "
+                      name="name"
+                      required
+                    />
+                  </div>
+                  <div class="col-md-6">
+                    <input
+                      type="email"
+                      class="form-control"
+                      placeholder="Your Email"
+                      name="email"
+                      required
+                    />
+                  </div>
+                  <div class="col-12">
+                    <textarea
+                      class="form-control"
+                      rows="5"
+                      placeholder="Tell us what you are looking for (jobs, partnership, sourcing, logistics, etc.)"
+                      name="message"
+                      required
+                    ></textarea>
+                  </div>
+                  <div class="col-12">
+                    <button
+                      type="button"
+                      class="btn btn-primary btn-lg px-5"
+                      onclick="sendToWhatsApp()"
+                    >
+                      Send Message
+                    </button>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+
+          <!-- Right: Contact Details -->
+          <div class="col-lg-5 d-flex">
+            <div class="card w-100 h-100 p-4 contact-card">
+              <h3 class="mb-3 text-warning">Contact Details</h3>
+              <ul class="list-unstyled mb-0">
+                <li class="mb-3">
+                  <span class="fw-bold text-info">Email:</span><br />
+                  <a
+                    href="mailto:boltronenterprisesindia@gmail.com"
+                    class="text-decoration-none text-light"
+                  >
+                    boltronenterprisesindia@gmail.com
+                  </a>
+                </li>
+                <li class="mb-3">
+                  <span class="fw-bold text-info">Phone:</span><br />
+                  <a
+                    href="tel:+916380218003"
+                    class="text-decoration-none text-light"
+                  >
+                    +91 63802 18003
+                  </a>
+                </li>
+                <li class="mb-3">
+                  <span class="fw-bold text-info">WhatsApp:</span><br />
+                  <a
+                    href="https://wa.me/916380218003"
+                    target="_blank"
+                    class="text-decoration-none text-success"
+                  >
+                    Chat on WhatsApp
+                  </a>
+                </li>
+                <li class="mb-3">
+                  <span class="fw-bold text-info">Location:</span><br />
+                  <span>Coimbatore, Tamil Nadu, India</span>
+                </li>
+                <li>
+                  <span class="fw-bold text-info">Availability:</span><br />
+                  <span>Mon – Sat, 10:00 AM – 7:00 PM IST</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- DIRECTORS -->
+    <section id="directors" class="py-5">
+      <div class="container">
+        <h2 class="text-center mb-4">Directors</h2>
+        <p class="text-center text-muted mb-4">
+          The leadership team guiding Boltron Enterprises.
+        </p>
+
+        <div class="row g-4">
+          <!-- Director 1 -->
+          <div class="col-6 col-md-4 col-lg-2">
+            <div
+              class="card bg-dark text-light border-secondary h-100 text-center"
+            >
+              <div class="p-3">
+                <img
+                  src="director1.jpg"
+                  alt="Director 1"
+                  class="img-fluid rounded-circle mb-2"
+                  style="width: 90px; height: 90px; object-fit: cover"
+                />
+                <h6 class="mb-1">Gokul K</h6>
+                <p class="small text-muted mb-0">Founder &amp; Director</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Director 2 -->
+          <div class="col-6 col-md-4 col-lg-2">
+            <div
+              class="card bg-dark text-light border-secondary h-100 text-center"
+            >
+              <div class="p-3">
+                <img
+                  src="director2.jpg"
+                  alt="Director 2"
+                  class="img-fluid rounded-circle mb-2"
+                  style="width: 90px; height: 90px; object-fit: cover"
+                />
+                <h6 class="mb-1">Name 2</h6>
+                <p class="small text-muted mb-0">Manufacturing</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Director 3 -->
+          <div class="col-6 col-md-4 col-lg-2">
+            <div
+              class="card bg-dark text-light border-secondary h-100 text-center"
+            >
+              <div class="p-3">
+                <img
+                  src="director3.jpg"
+                  alt="Director 3"
+                  class="img-fluid rounded-circle mb-2"
+                  style="width: 90px; height: 90px; object-fit: cover"
+                />
+                <h6 class="mb-1">Name 3</h6>
+                <p class="small text-muted mb-0">Logistics</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Director 4 -->
+          <div class="col-6 col-md-4 col-lg-2">
+            <div
+              class="card bg-dark text-light border-secondary h-100 text-center"
+            >
+              <div class="p-3">
+                <img
+                  src="director4.jpg"
+                  alt="Director 4"
+                  class="img-fluid rounded-circle mb-2"
+                  style="width: 90px; height: 90px; object-fit: cover"
+                />
+                <h6 class="mb-1">Name 4</h6>
+                <p class="small text-muted mb-0">Agri &amp; Farms</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Director 5 -->
+          <div class="col-6 col-md-4 col-lg-2">
+            <div
+              class="card bg-dark text-light border-secondary h-100 text-center"
+            >
+              <div class="p-3">
+                <img
+                  src="director5.jpg"
+                  alt="Director 5"
+                  class="img-fluid rounded-circle mb-2"
+                  style="width: 90px; height: 90px; object-fit: cover"
+                />
+                <h6 class="mb-1">Name 5</h6>
+                <p class="small text-muted mb-0">IT &amp; BPO</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Director 6 -->
+          <div class="col-6 col-md-4 col-lg-2">
+            <div
+              class="card bg-dark text-light border-secondary h-100 text-center"
+            >
+              <div class="p-3">
+                <img
+                  src="director6.jpg"
+                  alt="Director 6"
+                  class="img-fluid rounded-circle mb-2"
+                  style="width: 90px; height: 90px; object-fit: cover"
+                />
+                <h6 class="mb-1">Name 6</h6>
+                <p class="small text-muted mb-0">Finance &amp; Strategy</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="text-center">
+      <div class="container py-3">
+        <p class="mb-2">
+          &copy; 2026 Boltron Enterprises. All rights reserved. Tamil Nadu,
+          India
+        </p>
+
+        <div class="mb-2">
+          <a href="privacy-policy.html" class="text-decoration-none text-light"
+            >Privacy Policy</a
+          >
+          &nbsp;|&nbsp;
+          <a
+            href="terms-and-conditions.html"
+            class="text-decoration-none text-light"
+            >Terms &amp; Conditions</a
+          >
+        </div>
+
+        <div class="mt-2">
+          <a
+            href="https://www.instagram.com/boltron_enterprises?igsh=bzU5dnY0bWt1Mmt0"
+            target="_blank"
+            class="text-light me-3"
+          >
+            <i class="fab fa-instagram fa-lg"></i>
+          </a>
+          <a
+            href="https://youtube.com/@boltronecom?si=x5Ja72Uqg_uNYqa1"
+            target="_blank"
+            class="text-light me-3"
+          >
+            <i class="fab fa-youtube fa-lg"></i>
+          </a>
+          <a
+            href="https://wa.me/916380218003"
+            target="_blank"
+            class="text-light me-3"
+          >
+            <i class="fab fa-whatsapp fa-lg"></i>
+          </a>
+          <a
+            href="https://www.linkedin.com/in/boltron-enterprises-24068b32a?utm_source=share_via&utm_content=profile&utm_medium=member_android"
+            target="_blank"
+            class="text-light me-3"
+          >
+            <i class="fab fa-linkedin fa-lg"></i>
+          </a>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Custom JS -->
+    <script>
+      const GOOGLE_SCRIPT_URL =
+        "https://script.google.com/macros/s/AKfycbxMnIbGoQJ0Vijx4_VKLvmN1up_5giF-YSC3OM97_KWp-4cIifBdYpIYf3OAN2B22UhPw/exec";
+
+      async function sendToWhatsApp() {
+        const name = document.querySelector('input[name="name"]').value;
+        const email = document.querySelector('input[name="email"]').value;
+        const message = document.querySelector(
+          'textarea[name="message"]',
+        ).value;
+
+        const phone = "916380218003";
+
+        const text =
+          "New contact from Boltron site:%0A" +
+          "Name: " +
+          name +
+          "%0A" +
+          "Email: " +
+          email +
+          "%0A" +
+          "Message: " +
+          message;
+
+        try {
+          await fetch(GOOGLE_SCRIPT_URL, {
+            method: "POST",
+            mode: "no-cors",
+            headers: {
+              "Content-Type": "application/json",
+            },
+            body: JSON.stringify({ name, email, message }),
+          });
+        } catch (err) {
+          console.error("Error sending to Google Sheet", err);
+        }
+
+        const url = "https://wa.me/" + phone + "?text=" + text;
+        window.open(url, "_blank");
+      }
+
+      const sections = document.querySelectorAll("section[id]");
+      const navLinks = document.querySelectorAll(".navbar-nav .nav-link");
+
+      function onScroll() {
+        const scrollPos = window.scrollY + 120;
+
+        sections.forEach((section) => {
+          const top = section.offsetTop;
+          const height = section.offsetHeight;
+          const id = section.getAttribute("id");
+
+          if (scrollPos >= top && scrollPos < top + height) {
+            navLinks.forEach((link) => {
+              link.classList.remove("active");
+              if (link.getAttribute("href") === "#" + id) {
+                link.classList.add("active");
+              }
+            });
+          }
+        });
+      }
+
+      window.addEventListener("scroll", onScroll);
+
+      function handleNavSearch() {
+        const q = document
+          .getElementById("navSearchInput")
+          .value.trim()
+          .toLowerCase();
+        const cards = document.querySelectorAll("#services .card");
+
+        cards.forEach((card) => {
+          card.classList.remove("service-highlight");
+        });
+
+        if (!q) {
+          cards.forEach((card) => {
+            card.parentElement.classList.remove("d-none");
+          });
+          return;
+        }
+
+        let firstMatchCard = null;
+
+        cards.forEach((card) => {
+          const text = card.innerText.toLowerCase();
+
+          if (text.includes(q)) {
+            card.parentElement.classList.remove("d-none");
+            if (!firstMatchCard) {
+              firstMatchCard = card;
+            }
+          } else {
+            card.parentElement.classList.add("d-none");
+          }
+        });
+
+        if (firstMatchCard) {
+          firstMatchCard.classList.add("service-highlight");
+          firstMatchCard.scrollIntoView({
+            behavior: "smooth",
+            block: "center",
+          });
+        } else {
+          alert("No matching service found for: " + q);
+        }
+      }
+
+      function scrollToDirectors() {
+        const section = document.getElementById("directors");
+        if (section) {
+          section.scrollIntoView({ behavior: "smooth", block: "start" });
+        }
+      }
+    </script>
+  </body>
+</html>

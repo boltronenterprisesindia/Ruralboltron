@@ -1,0 +1,737 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, viewport-fit=cover"
+    />
+    <title>B Cut Studio | Affordable Video Editing for Small & Rural Businesses</title>
+
+    <!-- Bootstrap CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <!-- Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+      integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <!-- Custom -->
+    <style>
+      :root {
+        --primary: #f97316;
+        --bg: #050815;
+      }
+
+      html {
+        scroll-behavior: smooth;
+      }
+
+      body {
+        background: radial-gradient(circle at top, #111827 0, #020617 55%, #000 100%);
+        color: #e5e7eb;
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      }
+
+      .navbar {
+        background: rgba(15, 23, 42, 0.95);
+        backdrop-filter: blur(10px);
+      }
+
+      .navbar .nav-link {
+        color: #cbd5f5;
+        font-weight: 500;
+      }
+
+      .navbar .nav-link:hover,
+      .navbar .nav-link.active {
+        color: #fff;
+      }
+
+      .hero {
+        min-height: 85vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: left;
+      }
+
+      .hero-badge {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.4rem;
+        padding: 0.3rem 0.8rem;
+        border-radius: 999px;
+        border: 1px solid rgba(248, 250, 252, 0.2);
+        font-size: 0.8rem;
+        color: #e5e7eb;
+        background: rgba(15, 23, 42, 0.8);
+      }
+
+      .hero-title {
+        font-size: clamp(2.3rem, 4vw, 3rem);
+      }
+
+      .text-gradient {
+        background: linear-gradient(90deg, #f97316, #fb7185);
+        -webkit-background-clip: text;
+        color: transparent;
+      }
+
+      .btn-primary {
+        background: linear-gradient(90deg, #f97316, #fb7185);
+        border: none;
+        border-radius: 999px;
+        padding-inline: 2.5rem;
+      }
+
+      .btn-primary:hover {
+        opacity: 0.95;
+        background: linear-gradient(90deg, #fb923c, #fb7185);
+      }
+
+      .btn-outline-light {
+        border-radius: 999px;
+      }
+
+      section {
+        scroll-margin-top: 80px;
+      }
+
+      .section-title {
+        font-size: 1.8rem;
+        font-weight: 700;
+      }
+
+      .pill {
+        display: inline-block;
+        padding: 0.2rem 0.7rem;
+        border-radius: 999px;
+        border: 1px solid rgba(148, 163, 184, 0.5);
+        font-size: 0.75rem;
+        margin: 0.1rem;
+        color: #e5e7eb;
+      }
+
+      .card {
+        background: radial-gradient(circle at top left, #111827, #020617);
+        border: 1px solid rgba(148, 163, 184, 0.4);
+        border-radius: 1.1rem;
+        color: #e5e7eb;
+        transition:
+          transform 0.2s ease,
+          box-shadow 0.2s ease,
+          border-color 0.2s ease;
+      }
+
+      .card:hover {
+        transform: translateY(-4px);
+        box-shadow: 0 18px 45px rgba(15, 23, 42, 0.9);
+        border-color: rgba(249, 115, 22, 0.8);
+      }
+
+      .icon-circle {
+        width: 40px;
+        height: 40px;
+        border-radius: 999px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: rgba(15, 23, 42, 0.8);
+        color: #f97316;
+      }
+
+      .list-small {
+        padding-left: 1.2rem;
+      }
+
+      .list-small li {
+        margin-bottom: 0.25rem;
+      }
+
+      .badge-tag {
+        background: rgba(15, 23, 42, 0.8);
+        border-radius: 999px;
+        padding: 0.25rem 0.7rem;
+        font-size: 0.7rem;
+        color: #9ca3af;
+        border: 1px solid rgba(148, 163, 184, 0.5);
+      }
+
+      .bg-soft {
+        background: radial-gradient(circle at top, #111827, #020617);
+        border-radius: 1.5rem;
+        border: 1px solid rgba(148, 163, 184, 0.4);
+      }
+
+      footer {
+        border-top: 1px solid rgba(148, 163, 184, 0.4);
+        background: #020617;
+        color: #9ca3af;
+      }
+
+      footer a {
+        color: #e5e7eb;
+        text-decoration: none;
+      }
+
+      footer a:hover {
+        color: #f97316;
+      }
+
+      .highlight {
+        color: #facc15;
+      }
+
+      @media (max-width: 767.98px) {
+        .hero {
+          text-align: center;
+        }
+
+        .hero-actions {
+          justify-content: center;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark sticky-top">
+      <div class="container">
+        <a class="navbar-brand fw-bold" href="#home">
+          B Cut Studio
+        </a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navMenu"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navMenu">
+          <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link active" href="#home">Home</a>
+            </li>
+            <li class="nav-item"><a class="nav-link" href="#intro">Intro</a></li>
+            <li class="nav-item">
+              <a class="nav-link" href="#services">Services</a>
+            </li>
+            <li class="nav-item"><a class="nav-link" href="#clients">Clients</a></li>
+            <li class="nav-item"><a class="nav-link" href="#why-us">Why Us</a></li>
+            <li class="nav-item"><a class="nav-link" href="#mission">Mission</a></li>
+            <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+          </ul>
+          <a href="#contact" class="btn btn-primary btn-sm ms-lg-3">
+            Start Your Edit
+          </a>
+        </div>
+      </div>
+    </nav>
+
+    <!-- HERO -->
+    <section id="home" class="hero py-5">
+      <div class="container">
+        <div class="row align-items-center g-4">
+          <div class="col-lg-7">
+            <div class="hero-badge mb-3">
+              <i class="fa-solid fa-scissors"></i>
+              <span>Reels • Shorts • Product Ads</span>
+            </div>
+            <h1 class="hero-title fw-bold mb-3">
+              Affordable Video Editing for
+              <span class="text-gradient">Reels, Shorts &amp; Ads</span>
+            </h1>
+            <p class="lead mb-3">
+              Welcome to B Cut Studio — your creative editing partner for Instagram Reels,
+              YouTube Shorts, product ads, and social media videos, designed especially
+              for small businesses, rural businesses, creators, and growing brands at
+              affordable prices.
+            </p>
+            <p class="small text-muted mb-4">
+              Built for creators, small businesses, and rural entrepreneurs.
+            </p>
+            <div class="d-flex flex-wrap hero-actions gap-3">
+              <a href="#contact" class="btn btn-primary btn-lg">
+                Start Your Edit
+              </a>
+              <a href="#services" class="btn btn-outline-light btn-lg">
+                View Services
+              </a>
+            </div>
+          </div>
+          <div class="col-lg-5">
+            <div class="p-4 bg-soft h-100">
+              <p class="mb-2 badge-tag">
+                Short Brand Description
+              </p>
+              <p class="mb-3">
+                B Cut Studio offers affordable mobile-based video editing services for Instagram
+                Reels, YouTube Shorts, and product ads — helping small, local, and rural
+                businesses grow online through better content.
+              </p>
+              <p class="mb-1 fw-semibold">
+                One-line:
+              </p>
+              <p class="mb-0">
+                <span class="highlight">Affordable short-form video editing</span>
+                for small, local, and rural businesses.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- INTRO -->
+    <section id="intro" class="py-5">
+      <div class="container">
+        <div class="row g-4 align-items-start">
+          <div class="col-lg-7">
+            <h2 class="section-title mb-3">
+              Creative Editing for Modern &amp; Rural Businesses
+            </h2>
+            <p class="mb-2">
+              At B Cut Studio, we create affordable short-form video content for:
+            </p>
+            <ul class="list-small">
+              <li>Small businesses</li>
+              <li>Rural businesses</li>
+              <li>Local shops</li>
+              <li>Instagram stores</li>
+              <li>Home-based businesses</li>
+              <li>Startups</li>
+              <li>Content creators</li>
+            </ul>
+            <p class="mt-3 mb-2">
+              We help businesses build a stronger online presence through:
+            </p>
+            <ul class="list-small">
+              <li>Reels editing</li>
+              <li>Shorts editing</li>
+              <li>Product ad editing</li>
+              <li>Promo video editing</li>
+              <li>Mobile-friendly content creation</li>
+            </ul>
+            <p class="mt-3 mb-0">
+              Our goal is to make professional-looking content accessible even for small
+              and rural business owners.
+            </p>
+          </div>
+          <div class="col-lg-5">
+            <div class="p-4 bg-soft h-100">
+              <p class="badge-tag mb-2">Best Display Format</p>
+              <p class="mb-2">
+                <span class="fw-semibold">B Cut Studio</span><br />
+                Reels, Shorts &amp; Ads Editing for Small &amp; Rural Businesses
+              </p>
+              <p class="mb-2">
+                or
+              </p>
+              <p class="mb-0">
+                <span class="fw-semibold">B Cut Studio</span><br />
+                Affordable Video Editing for Local Brands &amp; Creators
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section id="about" class="py-5">
+      <div class="container">
+        <div class="row g-4 align-items-start">
+          <div class="col-lg-7">
+            <h2 class="section-title mb-3">About B Cut Studio</h2>
+            <p class="mb-3">
+              B Cut Studio is focused on short-form, social media–ready video editing that
+              helps businesses and creators show their products, services, and ideas in a
+              clear and engaging way.
+            </p>
+            <p class="mb-3">
+              We especially aim to support small-town and rural businesses that want to
+              promote their products and services online through engaging and affordable
+              video content.
+            </p>
+            <p class="mb-0">
+              Whether you are just starting your page or already running a brand, we help
+              you turn raw clips into clean and scroll-stopping Reels, Shorts, and ads.
+            </p>
+          </div>
+          <div class="col-lg-5">
+            <div class="p-4 bg-soft h-100">
+              <p class="badge-tag mb-2">Tagline Ideas</p>
+              <ul class="list-small mb-3">
+                <li>Affordable Video Editing for Small &amp; Rural Businesses</li>
+                <li>Creative Content for Local &amp; Rural Brands</li>
+                <li>Helping Small Businesses Grow Through Better Content</li>
+                <li>Social Media Editing for Every Business</li>
+              </ul>
+              <p class="badge-tag mb-2">Positioning Lines</p>
+              <ul class="list-small mb-0">
+                <li>Helping rural businesses grow through social media content</li>
+                <li>Affordable editing for local and small-town brands</li>
+                <li>Creative editing support for rural entrepreneurs</li>
+                <li>Professional-looking reels for businesses of every scale</li>
+                <li>Short-form content solutions for local and rural business promotion</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SERVICES -->
+    <section id="services" class="py-5">
+      <div class="container">
+        <div class="d-flex justify-content-between align-items-center mb-3 flex-wrap gap-2">
+          <h2 class="section-title mb-0">Services</h2>
+          <span class="badge-tag">Reels • Shorts • Product Ads • Promos</span>
+        </div>
+        <p class="mb-4">
+          Our services are ideal for businesses that want simple, effective, and low-cost
+          promotional videos for online growth.
+        </p>
+
+        <div class="row g-4">
+          <div class="col-md-4">
+            <div class="card h-100 p-4">
+              <div class="icon-circle mb-3">
+                <i class="fa-brands fa-instagram"></i>
+              </div>
+              <h5 class="mb-2">Reels &amp; Shorts Editing</h5>
+              <p class="mb-2">
+                Fast, engaging edits for Instagram Reels and YouTube Shorts from your
+                mobile or camera footage.
+              </p>
+              <ul class="list-small mb-0">
+                <li>Cutting &amp; timing</li>
+                <li>Basic transitions &amp; effects</li>
+                <li>Text, captions &amp; basic motion</li>
+                <li>Music &amp; beat sync (where applicable)</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="col-md-4">
+            <div class="card h-100 p-4">
+              <div class="icon-circle mb-3">
+                <i class="fa-solid fa-bag-shopping"></i>
+              </div>
+              <h5 class="mb-2">Product &amp; Promo Videos</h5>
+              <p class="mb-2">
+                Short product-focused videos for online selling, launches and offers.
+              </p>
+              <ul class="list-small mb-0">
+                <li>Product showcase edits</li>
+                <li>Offer / sale announcement clips</li>
+                <li>Before–after presentation</li>
+                <li>Simple text-based ad creatives</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="col-md-4">
+            <div class="card h-100 p-4">
+              <div class="icon-circle mb-3">
+                <i class="fa-solid fa-mobile-screen"></i>
+              </div>
+              <h5 class="mb-2">Mobile-Friendly Social Content</h5>
+              <p class="mb-2">
+                Editing specially optimized for mobile viewing and vertical formats.
+              </p>
+              <ul class="list-small mb-0">
+                <li>Vertical crop &amp; framing</li>
+                <li>Readable fonts and colors</li>
+                <li>Quick hooks in first few seconds</li>
+                <li>Output ready for upload</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- WHO WE WORK WITH -->
+    <section id="clients" class="py-5">
+      <div class="container">
+        <h2 class="section-title mb-3">Who We Work With</h2>
+        <p class="mb-4">
+          We create editing solutions for a wide range of local, small and rural businesses.
+        </p>
+        <div class="row g-3">
+          <div class="col-md-4">
+            <div class="bg-soft p-3 h-100">
+              <ul class="list-small mb-0">
+                <li>Small Businesses</li>
+                <li>Rural Businesses</li>
+                <li>Local Shops</li>
+                <li>Home-Based Brands</li>
+                <li>Instagram Sellers</li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="bg-soft p-3 h-100">
+              <ul class="list-small mb-0">
+                <li>Fashion Brands</li>
+                <li>Bakery &amp; Food Businesses</li>
+                <li>Tailoring / Boutique Businesses</li>
+                <li>Farm &amp; Agriculture Businesses</li>
+                <li>Online Product Sellers</li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="bg-soft p-3 h-100">
+              <ul class="list-small mb-0">
+                <li>Personal Brands</li>
+                <li>Content Creators</li>
+                <li>Startup Brands</li>
+                <li>Service Businesses</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- WHY CHOOSE US -->
+    <section id="why-us" class="py-5">
+      <div class="container">
+        <h2 class="section-title mb-3">Why Choose B Cut Studio?</h2>
+        <div class="row g-4">
+          <div class="col-md-4">
+            <div class="card h-100 p-4">
+              <h5 class="mb-2">1. Built for Small &amp; Rural Businesses</h5>
+              <p class="mb-0">
+                We focus on small, local, and rural businesses that want to grow through
+                social media — not just big city brands.
+              </p>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="card h-100 p-4">
+              <h5 class="mb-2">2. Affordable &amp; Practical</h5>
+              <p class="mb-0">
+                Our pricing and editing style are designed to be practical, simple and
+                budget-friendly for everyday business use.
+              </p>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="card h-100 p-4">
+              <h5 class="mb-2">3. Social Media Ready</h5>
+              <p class="mb-0">
+                All videos are delivered in formats that are ready to upload directly to
+                Instagram, YouTube, and other social platforms.
+              </p>
+            </div>
+          </div>
+
+          <div class="col-md-4">
+            <div class="card h-100 p-4">
+              <h5 class="mb-2">4. Simple Process</h5>
+              <p class="mb-0">
+                You share your clips, basic idea, and reference (if any) — we handle the
+                rest and send back edited content.
+              </p>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="card h-100 p-4">
+              <h5 class="mb-2">5. Trend-Focused Output</h5>
+              <p class="mb-0">
+                We keep content aligned with current short-form content styles so your
+                videos feel relevant and fresh.
+              </p>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="card h-100 p-4">
+              <h5 class="mb-2">6. Perfect for Rural &amp; Local Promotion</h5>
+              <p class="mb-0">
+                We help small and rural businesses create professional-looking content
+                that can be used to attract more customers through social media.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- MISSION + TRUST -->
+    <section id="mission" class="py-5">
+      <div class="container">
+        <div class="row g-4">
+          <div class="col-lg-6">
+            <h2 class="section-title mb-3">Our Mission</h2>
+            <p class="mb-3">
+              Our mission is to make video editing:
+            </p>
+            <ul class="list-small mb-3">
+              <li>Affordable</li>
+              <li>Fast</li>
+              <li>Social media ready</li>
+              <li>Trend-focused</li>
+              <li>Accessible to small businesses, creators, and rural entrepreneurs</li>
+            </ul>
+            <p class="mb-0">
+              We aim to help people and businesses create content that stands out online
+              without needing a big production budget.
+            </p>
+          </div>
+          <div class="col-lg-6">
+            <h2 class="section-title mb-3">
+              Helping Small &amp; Rural Businesses Grow Online
+            </h2>
+            <p class="mb-3">
+              At B Cut Studio, we believe good content should not be limited to big brands
+              alone.
+            </p>
+            <p class="mb-2">
+              We want to help:
+            </p>
+            <ul class="list-small mb-3">
+              <li>Small business owners</li>
+              <li>Rural entrepreneurs</li>
+              <li>Local product sellers</li>
+              <li>Home-based brands</li>
+              <li>New creators</li>
+            </ul>
+            <p class="mb-0">
+              …create better videos and build a stronger online presence at an affordable
+              cost.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section id="cta" class="py-5">
+      <div class="container">
+        <div class="bg-soft p-4 p-md-5 text-center">
+          <h2 class="section-title mb-3">Let Your Business Be Seen Online</h2>
+          <p class="mb-4">
+            Whether you run a small business, rural brand, local shop, or online page, we
+            can help you create better video content for your social media growth.
+          </p>
+          <div class="d-flex flex-wrap justify-content-center gap-3">
+            <a href="#contact" class="btn btn-primary btn-lg">
+              Start Your Edit
+            </a>
+            <a href="#contact" class="btn btn-outline-light btn-lg">
+              Contact Us
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact" class="py-5">
+      <div class="container">
+        <div class="row g-4 align-items-stretch">
+          <div class="col-lg-7">
+            <h2 class="section-title mb-3">Contact &amp; Booking</h2>
+            <p class="mb-4">
+              Share your requirement and we will get back with next steps, pricing and
+              simple clip-sharing instructions.
+            </p>
+            <form>
+              <div class="row g-3">
+                <div class="col-md-6">
+                  <input
+                    type="text"
+                    class="form-control"
+                    placeholder="Your Name / Business"
+                    required
+                  />
+                </div>
+                <div class="col-md-6">
+                  <input
+                    type="email"
+                    class="form-control"
+                    placeholder="Your Email"
+                    required
+                  />
+                </div>
+                <div class="col-md-6">
+                  <input
+                    type="text"
+                    class="form-control"
+                    placeholder="WhatsApp Number"
+                  />
+                </div>
+                <div class="col-md-6">
+                  <input
+                    type="text"
+                    class="form-control"
+                    placeholder="Location (City / Town / Village)"
+                  />
+                </div>
+                <div class="col-12">
+                  <textarea
+                    class="form-control"
+                    rows="4"
+                    placeholder="Tell us about your business and what type of videos you need (Reels, product ads, promo, etc.)"
+                    required
+                  ></textarea>
+                </div>
+                <div class="col-12 d-flex flex-wrap gap-3">
+                  <button type="submit" class="btn btn-primary px-4">
+                    Submit Enquiry
+                  </button>
+                  <a
+                    href="https://wa.me/91 6380218003"
+                    target="_blank"
+                    class="btn btn-outline-light px-4"
+                  >
+                    Chat on WhatsApp
+                  </a>
+                </div>
+              </div>
+            </form>
+          </div>
+          <div class="col-lg-5">
+            <div class="p-4 bg-soft h-100">
+              <h5 class="mb-3">Quick Info</h5>
+              <ul class="list-small mb-3">
+                <li>Editing done using mobile-friendly workflows</li>
+                <li>Content optimized for Instagram &amp; YouTube</li>
+                <li>Best suited for short-form and promo content</li>
+              </ul>
+              <p class="badge-tag mb-2">One-Line Position</p>
+              <p class="mb-0">
+                Affordable short-form video editing for small, local, and rural businesses.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="py-3">
+      <div class="container d-flex flex-column flex-md-row justify-content-between align-items-center gap-2">
+        <p class="mb-0 small">
+          &copy; 2026 B Cut Studio. All rights reserved.
+        </p>
+        <p class="mb-0 small">
+          Affordable Video Editing for Small &amp; Rural Businesses
+        </p>
+      </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>
